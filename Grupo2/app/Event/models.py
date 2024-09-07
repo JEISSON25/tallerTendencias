@@ -13,7 +13,11 @@ class Event(models.Model):
     date = models.DateField('Fecha')
     location = models.CharField('Ubicación', max_length=100)
     capacity = models.IntegerField('Capacidad')
-    
+    status_options = (
+        ("ACT", "Activo"),
+        ("CAN", "Cancelado"),
+    )
+    status = models.CharField(verbose_name='Estado', max_length=50, blank=False, null=False, choices=status_options, default='ACT')
     
     def __str__(self):
-        return f"{self.name} - {self.description} - {self.date} - {self.location} - {self.capacity}"
+        return f"{self.name} - {self.description} - {self.date} - {self.location} - {self.capacity} - {self.status}"
