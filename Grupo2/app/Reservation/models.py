@@ -12,6 +12,7 @@ class Reservation(models.Model):
     idEvent = models.ForeignKey(Event, on_delete=models.CASCADE, blank=False)
     idAttendee = models.ForeignKey(Attendee, on_delete=models.CASCADE, blank=False)
     num_entrys = models.IntegerField(verbose_name='Numero Entradas', blank=False, null=False)
+    canceled_bool = models.BooleanField(verbose_name="Cancel Reservation", default=False)
     
     def __str__(self):
         return f'{self.idEvent} - {self.idAttendee} - {self.num_entrys}'

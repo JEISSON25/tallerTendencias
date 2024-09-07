@@ -7,7 +7,8 @@ class ReservationSerializers(serializers.ModelSerializer):
     
     class Meta:
         model = Reservation
-        fields = ['id', 'num_entrys', 'event_name', 'attendee_name']
+        fields = '__all__'
+
 
     def get_event_name(self, obj):
         return obj.idEvent.name
