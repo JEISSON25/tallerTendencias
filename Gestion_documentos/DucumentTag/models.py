@@ -1,6 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-class DocumentTag(models.Model):
+class DucumentTag(models.Model):
     documento = models.ForeignKey(Document, on_delete=models.CASCADE)
     etiqueta = models.ForeignKey(Tag, on_delete=models.CASCADE)
 

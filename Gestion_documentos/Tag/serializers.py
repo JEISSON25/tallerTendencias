@@ -1,8 +1,9 @@
 from restframework import serializers
 from .models import Document, Tag, DocumentTag
 
-class DocumentSerializer(serializers.ModelSerializer):
+
+class TagSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Document
+        model = Tag
         fields = 'all'
 
