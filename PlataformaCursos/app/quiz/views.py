@@ -5,9 +5,9 @@ from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
 from .serializers import *
 
-class EnrollmentViewset(viewsets.ModelViewSet):
-    queryset = Enrollment.objects.all()
-    serializer_class = EnrollmentSerializer
+class QuizViewset(viewsets.ModelViewSet):
+    queryset = Quiz.objects.all()
+    serializer_class = QuizSerializer
     
     filter_backends = [
         DjangoFilterBackend,
