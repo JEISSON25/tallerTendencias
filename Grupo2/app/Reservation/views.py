@@ -18,5 +18,5 @@ class ReservationViewset(viewsets.ModelViewSet):
         filters.OrderingFilter,
     ]
     filterset_fields = ('__all__')
-    search_fields = ('idEvent__name', 'idAttendee__name', 'num_entrys')
+    search_fields = ('idEvent__name', 'idAttendee__nombre', 'num_entrys')
     ordering_fields = ('__all__')
