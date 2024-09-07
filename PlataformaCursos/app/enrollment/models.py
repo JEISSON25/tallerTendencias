@@ -16,7 +16,7 @@ class Enrollment(models.Model):
     blank=True 
     ) 
     idUser = models.ForeignKey ( 
-    Course, 
+    User, 
     verbose_name="User", 
     on_delete=models.CASCADE, 
     null=True, 
