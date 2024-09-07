@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'django-filte'
+    'App.Document',
+    'App.DucumentTag',
+    'App.Tag'
 ]
 
 MIDDLEWARE = [

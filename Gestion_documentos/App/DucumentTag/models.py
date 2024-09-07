@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from models import Document
-from models import Tag
+from App.Document.models import Document
+from App.Tag.models import Tag
 
 class DucumentTag(models.Model):
     documento = models.ForeignKey(Document, on_delete=models.CASCADE)
