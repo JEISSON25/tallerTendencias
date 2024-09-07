@@ -1,16 +1,15 @@
-from rest_framework import viewsets
+from django.shortcuts import render
+from rest_framework import viewsets,filters
 from .models import Document
-from .serializers import DocumentSerializer, DucumentTagSerializer
-from rest_framework.response import Response
-from rest_framework.decorators import action
+from .serializers import DocumentSerializer
+from django_filters.rest_framework import DjangoFilterBackend
 
 class DocumentViewSet(viewsets.ModelViewSet):
     queryset = Document.objects.all()
     serializer_class = DocumentSerializer
 
-    @action(detail=True, methods=['get'])
-    def tags(self, request, pk=None):
-        document = self.get_object()
-        tags = document.documenttag_set.all()
-        serializer = DucumentTagSerializer(tags, many=True)
-        return Response(serializer.data)
+    filter_backends = [
+        DjangoFilterBackend,
+        filters.SearchFilter,
+    ]
+    

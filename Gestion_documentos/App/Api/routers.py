@@ -5,10 +5,9 @@ from ..Tag.views import TagViewSet
 from ..DucumentTag.views import DucumentTagViewSet
 
 router = DefaultRouter()
-router.register(r'documents', DocumentViewSet)
-router.register(r'tags', TagViewSet)
-router.register(r'ducument-tags', DucumentTagViewSet)
 
-urlpatterns = [
-    path('', include(router.urls)),
-]
+router.register(r'documents', DocumentViewSet, basename='Documents')
+router.register(r'tags', TagViewSet, basename='Tags')
+router.register(r'document-tags', DucumentTagViewSet, basename='DocumentsTags')
+
+urlpatterns = router.urls

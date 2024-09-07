@@ -4,4 +4,4 @@ from .models import DucumentTag
 class DucumentTagSerializer(serializers.ModelSerializer):
     class Meta:
         model = DucumentTag
-        fields = '_all'
+        fields = '__all__'
