@@ -14,5 +14,6 @@ class Event(models.Model):
     location = models.CharField('Ubicación', max_length=100)
     capacity = models.IntegerField('Capacidad')
     
+    
     def __str__(self):
         return f"{self.name} - {self.description} - {self.date} - {self.location} - {self.capacity}"
