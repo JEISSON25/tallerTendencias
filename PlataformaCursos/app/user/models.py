@@ -11,6 +11,7 @@ class User(models.Model):
     documento = models.CharField("Documento", max_length=100)
     telefono = models.CharField("Teléfono", max_length=100)
     Email = models.EmailField("Email", max_length=100)
+    
 
     def __str__(self):
         return f'{self.nombre} {self.apellido}'
