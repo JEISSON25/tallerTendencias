@@ -1,5 +1,5 @@
-from restframework import serializers
-from .models import Document, Tag, DocumentTag
+from rest_framework import serializers
+from .models import Document
 
 class DocumentSerializer(serializers.ModelSerializer):
     class Meta:

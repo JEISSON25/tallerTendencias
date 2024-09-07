@@ -1,7 +1,7 @@
-from restframework import serializers
-from .models import Document, Tag, DocumentTag
+from rest_framework import serializers
+from .models import DucumentTag
 
 class DucumentTagSerializer(serializers.ModelSerializer):
     class Meta:
-        model = DocumentTag
+        model = DucumentTag
         fields = '_all'
