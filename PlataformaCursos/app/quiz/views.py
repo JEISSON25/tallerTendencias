@@ -5,9 +5,9 @@ from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
 from .serializers import *
 
-class CourseViewset(viewsets.ModelViewSet):
-    queryset = Course.objects.all()
-    serializer_class = CourseSerializer
+class QuizViewset(viewsets.ModelViewSet):
+    queryset = Quiz.objects.all()
+    serializer_class = QuizSerializer
     
     filter_backends = [
         DjangoFilterBackend,
