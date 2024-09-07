@@ -8,7 +8,7 @@ class Enrollment(models.Model):
         verbose_name = "Enrollment" 
         verbose_name_plural = "Enrollments" 
   
-    idCurse = models.ForeignKey ( 
+    idCourse = models.ForeignKey ( 
     Course, 
     verbose_name="Course", 
     on_delete=models.CASCADE, 
