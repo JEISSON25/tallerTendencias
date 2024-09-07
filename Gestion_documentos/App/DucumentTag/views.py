@@ -4,6 +4,6 @@ from .serializers import DucumentTagSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import action
 
-class DocumentTagViewSet(viewsets.ModelViewSet):
+class DucumentTagViewSet(viewsets.ModelViewSet):
     queryset = DucumentTag.objects.all()
     serializer_class = DucumentTagSerializer
