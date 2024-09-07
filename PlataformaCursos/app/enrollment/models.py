@@ -23,7 +23,7 @@ class Enrollment(models.Model):
     blank=True 
     ) 
 
-    fecha =models.DateTimeField("Fecha de inscripción")
+    fecha =models.DateField("Fecha de inscripción")
 
     def __str__(self):
         return f'{Course.nombre} {User.nombre}{User.apellido}'

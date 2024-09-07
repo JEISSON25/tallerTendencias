@@ -7,3 +7,6 @@ class Rol(models.Model):
         verbose_name_plural = "Rol" 
     
     rol = models.CharField("Rol", max_length=100)
+
+    def __str__(self):
+        return f'{self.rol}'

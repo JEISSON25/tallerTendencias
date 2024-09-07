@@ -15,4 +15,7 @@ class Lesson(models.Model):
     on_delete=models.CASCADE,  
     null=True,  
     blank=True  
-    )  
+    )
+
+    def __str__(self): 
+        return f'{self.nombre} {self.contenido} {Course.nombre}'

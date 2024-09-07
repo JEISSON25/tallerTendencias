@@ -7,7 +7,7 @@ class Quiz(models.Model):
         verbose_name = "Quiz" 
         verbose_name_plural = "Quiz" 
     
-    nombre = models.CharField("Nombre", max_length=100)
+    nombre = models.CharField("Tema", max_length=100)
     id_course = models.ForeignKey ( 
         Course, 
         verbose_name="Course", 
@@ -17,4 +17,4 @@ class Quiz(models.Model):
     )
 
     def __str__(self):
-        return f'{Course.nombre} - Tema: {self.nombre}'
+        return f'{self.nombre}'

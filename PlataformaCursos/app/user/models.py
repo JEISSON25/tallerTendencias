@@ -23,4 +23,4 @@ class User(models.Model):
     
 
     def __str__(self):
-        return f'{self.nombre} {self.apellido}{Rol.rol}'
+        return f'{self.nombre} {self.apellido}'

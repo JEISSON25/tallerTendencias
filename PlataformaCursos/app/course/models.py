@@ -9,8 +9,8 @@ class Course(models.Model):
     
     nombre = models.CharField("Nombre", max_length=100)
     descripción = models.CharField("Descripción", max_length=100)
-    fecha_inicio = models.DateTimeField("Fecha de inicio")
-    fecha_finalización = models.DateTimeField("Fecha de finalización")
+    fecha_inicio = models.DateField("Fecha de inicio")
+    fecha_finalización = models.DateField("Fecha de finalización")
     id_instructor = models.ForeignKey ( 
         User, 
         verbose_name="User", 

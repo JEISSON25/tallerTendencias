@@ -5,14 +5,16 @@ from ..course.views import *
 from ..enrollment.views import *
 from ..quiz.views import *
 from ..question.views import *
+from ..rol.views import *
 
 router = DefaultRouter()
 
 router.register(r'user', UserViewset, basename='user')
 router.register(r'course', CourseViewset, basename='course')
-#router.register(r'lesson', UserViewset, basename='lesson')
+router.register(r'lesson', UserViewset, basename='lesson')
 router.register(r'enrollment', EnrollmentViewset, basename='enrollment')
 router.register(r'quiz', QuizViewset, basename='quiz')
 router.register(r'question', QuestionViewset, basename='question')
+router.register(r'rol', RolViewset, basename='rol')
 
 urlpatterns = router.urls

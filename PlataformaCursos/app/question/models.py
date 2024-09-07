@@ -7,7 +7,7 @@ class Question(models.Model):
         verbose_name_plural = "Question" 
     
     texto = models.CharField("Texto", max_length=500)
-    opciones = models.CharField("Opciones", max_length=500)
+    opciones = models.TextField("Opciones", max_length=500)
     respuesta_correcta = models.CharField("Respuesta Correcta", max_length=100)
     id_quiz = models.ForeignKey ( 
         Quiz, 

@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'app.user',
     'app.course',
     'app.rol',
-    #'app.lesson',
+    'app.lesson',
     'app.enrollment',
     'app.quiz',
     'app.question',
